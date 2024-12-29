@@ -1,17 +1,33 @@
 ---
-layout: about
+layout: post
 title: About
 ---
 
-<h2>About</h2>
+{% capture about_content %}
+# Walden
 
-<p>
-:art:&nbsp;Yet another theme for elegant writers with modern flat style
-and beautiful night mode.
-</p>
+## 高级用户体验设计师 / 产品设计师
 
-<p>
-Hey, nice to meet you, you found this Jekyll theme. Here the yet another
-theme is a modern theme, and it's quite clear, clean and neat for writers
-and posts.
-</p>
+我是 Walden，一名专注于用户体验和产品设计的设计师。
+
+### 设计理念
+
+我相信优秀的设计应该是简单而优雅的，就像大自然中的规律一样。正如梭罗在瓦尔登湖畔追求简单生活，我也在设计中追求简约而不简单的美。
+
+### 当前工作
+
+目前，我专注于探索 AI 在设计领域的应用。我热衷于创造一些有趣的东西。
+
+### 专业技能
+
+- **UI/UX 设计**
+- **产品设计**  
+- **交互设计**
+- **用户研究**
+- **设计系统**
+- **原型设计**
+- **视觉设计**
+- **用户体验**
+{% endcapture %}
+
+{{ about_content | markdownify }}
