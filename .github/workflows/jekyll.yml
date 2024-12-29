@@ -8,25 +8,37 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+  
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4.1'
           bundler-cache: true
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
       - name: Build with Jekyll
         run: |
           bundle install
           bundle exec jekyll build
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          path: ./_site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
