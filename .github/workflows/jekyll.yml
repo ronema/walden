@@ -20,12 +20,13 @@ jobs:
           rbenv install 2.7.8
           rbenv global 2.7.8
           gem install bundler -v 2.3.26
+          export PATH="$HOME/.rbenv/versions/2.7.8/bin:$PATH"
       - name: Build with Jekyll
         run: |
           gem env
           gem list
-          bundle _2.3.26_ install --verbose
-          bundle _2.3.26_ exec jekyll build --trace
+          $HOME/.rbenv/versions/2.7.8/bin/bundle _2.3.26_ install --verbose
+          $HOME/.rbenv/versions/2.7.8/bin/bundle _2.3.26_ exec jekyll build --trace
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
