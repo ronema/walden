@@ -18,7 +18,7 @@
 {%- if has_banner -%}
   <style>
     html .page-banner {
-      background: #0a192f;
+      background: #061227;
     }
   </style>
   {%- if banner_height -%}
@@ -66,7 +66,17 @@
       <div id="particles-js"></div>
       <script src="{{ '/assets/js/particles.min.js' | relative_url }}"></script>
       <script>
-        particlesJS.load('particles-js', '{{ "/assets/js/particles-config.json" | relative_url }}', function() {
+        var configPath = '{{ "/assets/js/particles-config.json" | relative_url }}';
+        console.log('Current path:', window.location.pathname);
+        console.log('Checking if path contains /figma/插件/');
+        if (window.location.pathname.includes('/figma/插件/') || window.location.pathname.includes('/2024/12/29/')) {
+          console.log('Using post config');
+          configPath = '{{ "/assets/js/particles-config-post.json" | relative_url }}';
+        } else {
+          console.log('Using default config');
+        }
+        console.log('Loading config from:', configPath);
+        particlesJS.load('particles-js', configPath, function() {
           console.log('callback - particles.js config loaded');
         });
       </script>
