@@ -14,10 +14,12 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7'
+          ruby-version: '3.0'
           bundler-cache: true
       - name: Build with Jekyll
         run: |
+          gem env
+          gem list
           bundle install --verbose
           bundle exec jekyll build --trace
       - name: Deploy to GitHub Pages
