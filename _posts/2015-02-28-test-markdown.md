@@ -1,36 +1,35 @@
 ---
 layout: post
-title: Test markdown
-subtitle: Each post also has a subtitle
+title: Markdown测试
+subtitle: 每篇文章都可以有一个副标题
 categories: markdown
-tags: [test]
+tags: [测试]
 ---
 
-You can write regular [markdown](https://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+你可以在这里编写常规的[Markdown](https://markdowntutorial.com/)，Jekyll会自动将其转换为漂亮的网页。我强烈建议你[花5分钟学习如何编写Markdown](http://markdowntutorial.com/)，它将教你如何将常规文本转换为粗体/斜体/标题/表格等。
 
-**Here is some bold text**
+**这是一些粗体文本**
 
-## Here is a secondary heading
+## 这是一个二级标题
 
-Here's a useless table:
+这里有一个无用的表格：
 
-| Number | Next number | Previous number |
+| 数字 | 下一个数字 | 上一个数字 |
 | :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
+| 五 | 六 | 四 |
+| 十 | 十一 | 九 |
+| 七 | 八 | 六 |
+| 二 | 三 | 一 |
 
+来一张美味的可丽饼怎么样？
 
-How about a yummy crepe?
+![可丽饼](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
 
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
+它也可以居中显示！
 
-It can also be centered!
+![可丽饼](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
 
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
-
-Here's a code chunk:
+这里是一个代码块：
 
 ~~~
 var foo = function(x) {
@@ -39,7 +38,7 @@ var foo = function(x) {
 foo(3)
 ~~~
 
-And here is the same code with syntax highlighting:
+这是带有语法高亮的相同代码：
 
 ```javascript
 var foo = function(x) {
@@ -48,7 +47,7 @@ var foo = function(x) {
 foo(3)
 ```
 
-And here is the same code yet again but with line numbers:
+这是带有行号的相同代码：
 
 {% highlight javascript linenos %}
 var foo = function(x) {
@@ -57,25 +56,25 @@ var foo = function(x) {
 foo(3)
 {% endhighlight %}
 
-## Boxes
-You can add notification, warning and error boxes like this:
+## 盒子
+你可以像这样添加通知、警告和错误框：
 
-### Notification
+### 通知
 
 {: .box-note}
-**Note:** This is a notification box.
+**注意：** 这是一个通知框。
 
-### Warning
+### 警告
 
 {: .box-warning}
-**Warning:** This is a warning box.
+**警告：** 这是一个警告框。
 
-### Error
+### 错误
 
 {: .box-error}
-**Error:** This is an error box.
+**错误：** 这是一个错误框。
 
-### Emoji
+### 表情符号
 
-This single quote code `inet:email:message:to` will not be parsed to emoji icon
+这个单引号代码 `inet:email:message:to` 不会被解析为表情符号图标
 :+1:.

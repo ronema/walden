@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Welcome to Jekyll!
-subtitle: A awesome static site generator.
+title: 欢迎使用Jekyll！
+subtitle: 一个强大的静态网站生成器。
 author: Jeffrey
 categories: jekyll
 banner:
@@ -21,25 +21,25 @@ top: 1
 sidebar: []
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+你可以在`_posts`目录中找到这篇文章。继续编辑它并重新构建网站以查看更改。你可以通过多种方式重新构建网站，但最常见的方法是运行`jekyll serve`，它会启动一个Web服务器并在文件更新时自动重新生成你的网站。
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+要添加新文章，只需在`_posts`目录中添加一个遵循`YYYY-MM-DD-文章名称.ext`格式的文件，并包含必要的前置信息。查看这篇文章的源代码以了解其工作原理。
 
-## section 1
+## 第一部分
 
-Jekyll also offers powerful support for code snippets:
+Jekyll还提供了强大的代码片段支持：
 
 {% highlight ruby %}
 def print_hi(name)
 puts "Hi, #{name}"
 end
 print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+#=> 打印 'Hi, Tom' 到 STDOUT。
 {% endhighlight %}
 
-## section 2
+## 第二部分
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+查看[Jekyll文档][jekyll-docs]以获取有关如何充分利用Jekyll的更多信息。请在[Jekyll的GitHub仓库][jekyll-gh]中提交所有错误/功能请求。如果你有任何问题，可以在[Jekyll Talk][jekyll-talk]上提问。
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]: https://github.com/jekyll/jekyll
@@ -59,7 +59,7 @@ int main() {
   cout << "Hello World!";
   return 0;
 }
-// prints 'Hi, Tom' to STDOUT.
+// 打印 'Hi, Tom' 到 STDOUT。
 ```
 
 ```python
@@ -72,4 +72,3 @@ p1 = Person("John", 36)
 
 print(p1.name)
 print(p1.age)
-```
