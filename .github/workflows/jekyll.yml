@@ -11,16 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7.8'
-          bundler-cache: true
+      - name: Set up Ruby with rbenv
+        run: |
+          git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+          echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+          source ~/.bashrc
+          git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+          rbenv install 2.7.8
+          rbenv global 2.7.8
+          gem install bundler -v 2.3.26
       - name: Build with Jekyll
         run: |
           gem env
           gem list
-          gem install bundler -v 2.3.26
           bundle _2.3.26_ install --verbose
           bundle _2.3.26_ exec jekyll build --trace
       - name: Deploy to GitHub Pages
