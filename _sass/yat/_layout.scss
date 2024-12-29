@@ -120,6 +120,10 @@ html {
   right: 0;
   top: 0;
 
+  .page-about & {
+    right: 20px;
+  }
+
   .nav-trigger {
     display: none;
   }
