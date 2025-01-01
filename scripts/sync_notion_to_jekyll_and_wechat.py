@@ -128,8 +128,12 @@ def process_block_content(block):
             language = block[block_type]['language']
             return f"```{language}\n{code_content}\n```"
     elif block_type == 'image':
-        image_url = block[block_type]['file']['url']
-        return f"![image]({image_url})"
+        try:
+            image_url = block[block_type]['file']['url']
+            return f"![image]({image_url})"
+        except Exception as e:
+            print(f"图片处理失败: {str(e)}")
+            return ""
     elif block_type == 'quote':
         text = block[block_type]['rich_text']
         if text:
