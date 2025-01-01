@@ -1,0 +1,46 @@
+2025-01-01 18:48:59,099 - INFO - 开始执行 Notion 到微信公众号的同步
+2025-01-01 18:48:59,099 - INFO - 正在获取微信公众号 Access Token...
+2025-01-01 18:48:59,537 - INFO - 成功获取微信公众号 Access Token
+2025-01-01 18:48:59,537 - INFO - 正在从 Notion 获取页面内容...
+2025-01-01 18:49:00,531 - INFO - HTTP Request: GET https://api.notion.com/v1/pages/16e96ee0-ac35-8078-9c9a-c743d0f3e841 "HTTP/1.1 200 OK"
+2025-01-01 18:49:00,531 - INFO - 获取到文章标题: Walden’s Blog
+2025-01-01 18:49:00,910 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16e96ee0-ac35-8078-9c9a-c743d0f3e841/children "HTTP/1.1 200 OK"
+2025-01-01 18:49:00,917 - INFO - 获取到 5 个内容块
+2025-01-01 18:49:00,917 - INFO - 生成的文章内容长度: 125 字符
+2025-01-01 18:49:00,917 - INFO - 正在发布文章到微信公众号...
+2025-01-01 18:49:00,918 - INFO - 内容已备份到: backups/article_20250101_184900.json
+2025-01-01 18:49:00,926 - INFO - 准备发布文章：Walden’s Blog
+2025-01-01 18:49:00,926 - INFO - 文章内容（前200字符）：<h2>notion 同步到 jekyll 页面的关键问题</h2>
+
+<h2>Jekyll网站互动设计疑问点</h2>
+
+<h2>如何使用 Notion 来同步管理你的博客和微信公众号</h2>
+
+<h2>如何将 notion 内容同步到 GitHub 的 jekyll 博客中</h2>
+
+2025-01-01 18:49:01,130 - ERROR - 发布文章失败: {'errcode': 40007, 'errmsg': 'invalid media_id hint: [xw7QNA05412801] rid: 67751d9d-6ff76cba-34ea3459'}
+2025-01-01 18:49:05,134 - INFO - 正在发布文章到微信公众号...
+2025-01-01 18:49:05,135 - INFO - 内容已备份到: backups/article_20250101_184905.json
+2025-01-01 18:49:05,136 - INFO - 准备发布文章：Walden’s Blog
+2025-01-01 18:49:05,136 - INFO - 文章内容（前200字符）：<h2>notion 同步到 jekyll 页面的关键问题</h2>
+
+<h2>Jekyll网站互动设计疑问点</h2>
+
+<h2>如何使用 Notion 来同步管理你的博客和微信公众号</h2>
+
+<h2>如何将 notion 内容同步到 GitHub 的 jekyll 博客中</h2>
+
+2025-01-01 18:49:05,420 - ERROR - 发布文章失败: {'errcode': 40007, 'errmsg': 'invalid media_id hint: [GEZn805452907] rid: 67751da1-31fab1d9-528d7abb'}
+2025-01-01 18:49:09,422 - INFO - 正在发布文章到微信公众号...
+2025-01-01 18:49:09,423 - INFO - 内容已备份到: backups/article_20250101_184909.json
+2025-01-01 18:49:09,424 - INFO - 准备发布文章：Walden’s Blog
+2025-01-01 18:49:09,424 - INFO - 文章内容（前200字符）：<h2>notion 同步到 jekyll 页面的关键问题</h2>
+
+<h2>Jekyll网站互动设计疑问点</h2>
+
+<h2>如何使用 Notion 来同步管理你的博客和微信公众号</h2>
+
+<h2>如何将 notion 内容同步到 GitHub 的 jekyll 博客中</h2>
+
+2025-01-01 18:49:09,633 - ERROR - 发布文章失败: {'errcode': 40007, 'errmsg': 'invalid media_id hint: [TmMq905493954] rid: 67751da5-7ce939a6-500ef60b'}
+2025-01-01 18:49:09,633 - ERROR - 同步过程中发生错误: RetryError[<Future at 0x102623e80 state=finished raised ValueError>]

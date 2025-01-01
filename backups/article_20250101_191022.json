@@ -1,0 +1,5 @@
+{
+  "title": "notion 同步到 jekyll 页面的关键问题",
+  "content": "\n    <div style=\"font-size: 14px; line-height: 1.8; color: #333;\">\n        <img src=\"https://images.unsplash.com/photo-1697439838188-aaa48162214f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\" style=\"max-width: 100%; height: auto; display: block; margin: 20px auto;\" />\n<p>问题主要出在两个地方：</p>\n<ol>\n<li>页面类型的混淆：</li>\n<li>API 调用方式的改进：</li>\n<li>内容获取逻辑：</li>\n<li>Markdown 转换：</li>\n</ol>\n<p>这就是为什么最新的代码能工作的原因。我们：</p>\n<ol>\n<li>正确识别了内容类型（页面而不是数据库）</li>\n<li>使用了正确的 API 调用方式</li>\n<li>正确处理了页面的块结构</li>\n<li>将 Notion 的格式正确转换为 Markdown</li>\n</ol>\n    </div>\n    \n    <hr />\n    <p style=\"color: #999; font-size: 12px;\">\n        本文由 Notion 自动同步至微信公众号<br>\n        发布时间：2025-01-01 19:10:22\n    </p>\n    ",
+  "timestamp": "20250101_191022"
+}

@@ -1,0 +1,49 @@
+2025-01-01 18:51:00,668 - INFO - 开始执行 Notion 到微信公众号的同步
+2025-01-01 18:51:00,668 - INFO - 正在获取微信公众号 Access Token...
+2025-01-01 18:51:00,975 - INFO - 成功获取微信公众号 Access Token
+2025-01-01 18:51:00,975 - INFO - 正在从 Notion 获取页面内容...
+2025-01-01 18:51:02,112 - INFO - HTTP Request: GET https://api.notion.com/v1/pages/16e96ee0-ac35-8078-9c9a-c743d0f3e841 "HTTP/1.1 200 OK"
+2025-01-01 18:51:02,112 - INFO - 获取到文章标题: Walden’s Blog
+2025-01-01 18:51:03,275 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16e96ee0-ac35-8078-9c9a-c743d0f3e841/children "HTTP/1.1 200 OK"
+2025-01-01 18:51:03,275 - INFO - 获取到 5 个内容块
+2025-01-01 18:51:03,276 - INFO - 生成的文章内容长度: 125 字符
+2025-01-01 18:51:03,276 - INFO - 正在发布文章到微信公众号...
+2025-01-01 18:51:03,276 - INFO - 内容已备份到: backups/article_20250101_185103.json
+2025-01-01 18:51:03,276 - INFO - 正在上传默认封面图片...
+2025-01-01 18:51:04,262 - INFO - 封面图片上传成功
+2025-01-01 18:51:04,268 - INFO - 准备发布文章：Walden’s Blog
+2025-01-01 18:51:04,268 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <p><strong>notion 同步到 jekyll 页面的关键问题</strong></p>
+
+<p><strong>Jekyll网站互动设计疑问点</strong></p>
+
+<p><strong>如何使用 Notion 来同步管理你的博客和
+2025-01-01 18:51:04,528 - ERROR - 发布文章失败: {'errcode': 45004, 'errmsg': 'description size out of limit hint: [2yJ0fA06649020] rid: 67751e18-57f1541e-48fec0bc'}
+2025-01-01 18:51:08,532 - INFO - 正在发布文章到微信公众号...
+2025-01-01 18:51:08,533 - INFO - 内容已备份到: backups/article_20250101_185108.json
+2025-01-01 18:51:08,534 - INFO - 正在上传默认封面图片...
+2025-01-01 18:51:09,140 - INFO - 封面图片上传成功
+2025-01-01 18:51:09,141 - INFO - 准备发布文章：Walden’s Blog
+2025-01-01 18:51:09,141 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <p><strong>notion 同步到 jekyll 页面的关键问题</strong></p>
+
+<p><strong>Jekyll网站互动设计疑问点</strong></p>
+
+<p><strong>如何使用 Notion 来同步管理你的博客和
+2025-01-01 18:51:09,335 - ERROR - 发布文章失败: {'errcode': 45004, 'errmsg': 'description size out of limit hint: [j_nyDA06699037] rid: 67751e1d-619d4873-5139b8e8'}
+2025-01-01 18:51:13,341 - INFO - 正在发布文章到微信公众号...
+2025-01-01 18:51:13,342 - INFO - 内容已备份到: backups/article_20250101_185113.json
+2025-01-01 18:51:13,342 - INFO - 正在上传默认封面图片...
+2025-01-01 18:51:14,004 - INFO - 封面图片上传成功
+2025-01-01 18:51:14,005 - INFO - 准备发布文章：Walden’s Blog
+2025-01-01 18:51:14,005 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <p><strong>notion 同步到 jekyll 页面的关键问题</strong></p>
+
+<p><strong>Jekyll网站互动设计疑问点</strong></p>
+
+<p><strong>如何使用 Notion 来同步管理你的博客和
+2025-01-01 18:51:14,239 - ERROR - 发布文章失败: {'errcode': 45004, 'errmsg': 'description size out of limit hint: [_kio9a06748155] rid: 67751e22-1a2df63a-087bdf95'}
+2025-01-01 18:51:14,239 - ERROR - 同步过程中发生错误: RetryError[<Future at 0x11113bf40 state=finished raised ValueError>]

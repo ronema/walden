@@ -1,0 +1,744 @@
+2025-01-01 19:15:15,171 - INFO - 开始执行 Notion 到微信公众号的同步
+2025-01-01 19:15:15,171 - INFO - 正在获取微信公众号 Access Token...
+2025-01-01 19:15:15,178 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:15,539 - DEBUG - https://api.weixin.qq.com:443 "GET /cgi-bin/token?grant_type=client_credential&appid=wx4cfd82f07644c374&secret=a93b007c2d6d756026b23771ed897def HTTP/1.1" 200 173
+2025-01-01 19:15:15,539 - INFO - 成功获取微信公众号 Access Token
+2025-01-01 19:15:15,601 - DEBUG - connect_tcp.started host='127.0.0.1' port=7897 local_address=None timeout=60.0 socket_options=None
+2025-01-01 19:15:15,602 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x110597c70>
+2025-01-01 19:15:15,602 - DEBUG - send_request_headers.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:15,602 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:15,602 - DEBUG - send_request_body.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:15,602 - DEBUG - send_request_body.complete
+2025-01-01 19:15:15,602 - DEBUG - receive_response_headers.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:15,603 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'Connection established', [])
+2025-01-01 19:15:15,603 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x11058d350> server_hostname='api.notion.com' timeout=60.0
+2025-01-01 19:15:16,302 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1105aa040>
+2025-01-01 19:15:16,303 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:16,303 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:16,303 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:16,303 - DEBUG - send_request_body.complete
+2025-01-01 19:15:16,303 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:16,908 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:16 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb2172ca9642b7f-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"ad9-//y08CUssq9lpLPfEH6E5n2sdKg"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'edd69aba-0327-4f05-86e1-383b9810d83a'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Set-Cookie', b'__cf_bm=t7Q_jACBTonxMYqHU53af5UEIapUpgB69esD9s8ElPM-1735730116-1.0.1.1-2vxjX3HxTGK4fA4eh3.pjvLFq0YNH73KIrPMf61.G9nG2i9j8IHaIj_lJg.UjxXp4WA4bWpH7vDilvvPWRV49w; path=/; expires=Wed, 01-Jan-25 11:45:16 GMT; domain=.notion.com; HttpOnly; Secure; SameSite=None'), (b'Set-Cookie', b'_cfuvid=0XzHQ29YOD_9klJeS9RElKvohKuAibD.g9TlgsBL2Ks-1735730116919-0.0.1.1-604800000; path=/; domain=.notion.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:16,909 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16e96ee0-ac35-8078-9c9a-c743d0f3e841/children "HTTP/1.1 200 OK"
+2025-01-01 19:15:16,909 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:16,910 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:16,910 - DEBUG - response_closed.started
+2025-01-01 19:15:16,910 - DEBUG - response_closed.complete
+2025-01-01 19:15:16,910 - INFO - 正在处理页面: Main Page
+2025-01-01 19:15:16,910 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:16,910 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:16,910 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:16,910 - DEBUG - send_request_body.complete
+2025-01-01 19:15:16,911 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:17,287 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:17 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb217308d3c2b7f-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'ETag', b'W/"3f6-HgxlURIcFH0tbxqh9r18EJgP3x0"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'43cdba6e-dfb9-421a-b5fc-14730c5f5cf9'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:17,287 - INFO - HTTP Request: GET https://api.notion.com/v1/pages/16e96ee0-ac35-8078-9c9a-c743d0f3e841 "HTTP/1.1 200 OK"
+2025-01-01 19:15:17,288 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:17,288 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:17,288 - DEBUG - response_closed.started
+2025-01-01 19:15:17,288 - DEBUG - response_closed.complete
+2025-01-01 19:15:17,288 - INFO - 获取到文章标题: Walden’s Blog
+2025-01-01 19:15:17,289 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:17,289 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:17,289 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:17,289 - DEBUG - send_request_body.complete
+2025-01-01 19:15:17,289 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:17,695 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:17 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb21732ef5b2b7f-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"ad9-gL2RH5bJGziZYW0M+0Z10tYCvi0"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'9cd80a9c-0f8f-47ba-92fe-82ad5b016ab2'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:17,697 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16e96ee0-ac35-8078-9c9a-c743d0f3e841/children "HTTP/1.1 200 OK"
+2025-01-01 19:15:17,698 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:17,698 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:17,699 - DEBUG - response_closed.started
+2025-01-01 19:15:17,699 - DEBUG - response_closed.complete
+2025-01-01 19:15:17,700 - INFO - 获取到 5 个内容块
+2025-01-01 19:15:17,700 - DEBUG - 处理块类型: child_page
+2025-01-01 19:15:17,700 - DEBUG - 处理块类型: child_page
+2025-01-01 19:15:17,700 - DEBUG - 处理块类型: child_page
+2025-01-01 19:15:17,700 - DEBUG - 处理块类型: child_page
+2025-01-01 19:15:17,700 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:17,700 - INFO - 生成的文章内容长度: 0 字符
+2025-01-01 19:15:17,700 - DEBUG - 生成的文章内容: 
+2025-01-01 19:15:17,700 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:17,701 - INFO - 内容已备份到: backups/article_20250101_191517.json
+2025-01-01 19:15:17,701 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:17,727 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:18,522 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:18,523 - INFO - 封面图片上传成功
+2025-01-01 19:15:18,524 - INFO - 准备发布文章：Walden’s Blog
+2025-01-01 19:15:18,524 - INFO - 文章内容（前200字符）：
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+        发布时间：2025-01-01 19:15:18
+    </p>
+    
+2025-01-01 19:15:18,528 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:20,191 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 89
+2025-01-01 19:15:20,194 - INFO - 文章成功发布到微信公众号草稿箱
+2025-01-01 19:15:20,195 - INFO - 页面 Main Page 已成功发布到微信公众号
+2025-01-01 19:15:20,195 - INFO - 正在处理页面: notion 同步到 jekyll 页面的关键问题
+2025-01-01 19:15:20,196 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:20,196 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:20,196 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:20,197 - DEBUG - send_request_body.complete
+2025-01-01 19:15:20,197 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:20,697 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:20 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb2174508932b7f-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'ETag', b'W/"3a4-2079lnp/kFYoWpFfu80miAE+4QI"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'bc709ec2-40e2-4e67-b17b-0482ca075626'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:20,697 - INFO - HTTP Request: GET https://api.notion.com/v1/pages/16e96ee0-ac35-8000-ba5d-d5537f904f1f "HTTP/1.1 200 OK"
+2025-01-01 19:15:20,697 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:20,697 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:20,697 - DEBUG - response_closed.started
+2025-01-01 19:15:20,698 - DEBUG - response_closed.complete
+2025-01-01 19:15:20,698 - INFO - 获取到文章标题: notion 同步到 jekyll 页面的关键问题
+2025-01-01 19:15:20,698 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:20,699 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:20,699 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:20,707 - DEBUG - send_request_body.complete
+2025-01-01 19:15:20,707 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:21,092 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:21 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb217482b872b7f-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"26a9-/l6LaYGLbPJxQJMco6QGb5N9V/g"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'760459a5-5cd9-46f8-a3c9-ef8083b6da66'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:21,093 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16e96ee0-ac35-8000-ba5d-d5537f904f1f/children "HTTP/1.1 200 OK"
+2025-01-01 19:15:21,093 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:21,094 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:21,094 - DEBUG - response_closed.started
+2025-01-01 19:15:21,094 - DEBUG - response_closed.complete
+2025-01-01 19:15:21,095 - INFO - 获取到 12 个内容块
+2025-01-01 19:15:21,095 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:21,095 - DEBUG - 处理块类型: image
+2025-01-01 19:15:21,095 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:21,095 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,096 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:21,097 - INFO - 生成的文章内容长度: 743 字符
+2025-01-01 19:15:21,097 - DEBUG - 生成的文章内容: 
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1697439838188-aaa48162214f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="max-width: 100%; height: auto; display: block; margin: 20px auto;" />
+<p>问题主要出在两个地方：</p>
+<ol>
+<li>页面类型的混淆：</li>
+<li>API 调用方式的改进：</li>
+<li>内容获取逻辑：</li>
+<li>Markdown 转换：</li>
+</ol>
+<p>这就是为什么最新的代码能工作的原因。我们：</p>
+<ol>
+<li>正确识别了内容类型（页面而不是数据库）</li>
+<li>使用了正确的 API 调用方式</li>
+<li>正确处理了页面的块结构</li>
+<li>将 Notion 的格式正确转换为 Markdown</li>
+</ol>
+    </div>
+    
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+        发布时间：2025-01-01 19:15:21
+    </p>
+    
+2025-01-01 19:15:21,097 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:21,098 - INFO - 内容已备份到: backups/article_20250101_191521.json
+2025-01-01 19:15:21,098 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:21,109 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:21,690 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:21,691 - INFO - 封面图片上传成功
+2025-01-01 19:15:21,691 - INFO - 准备发布文章：notion 同步到 jekyll 页面的关键问题
+2025-01-01 19:15:21,691 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1697439838188-aaa48162214f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M
+2025-01-01 19:15:21,697 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:21,968 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:15:21,970 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [DwxDDA01224357] rid: 677523c9-109d6d04-07d9de46'}
+2025-01-01 19:15:25,976 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:25,978 - INFO - 内容已备份到: backups/article_20250101_191525.json
+2025-01-01 19:15:25,978 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:25,991 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:26,496 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:26,497 - INFO - 封面图片上传成功
+2025-01-01 19:15:26,498 - INFO - 准备发布文章：notion 同步到 jekyll 页面的关键问题
+2025-01-01 19:15:26,498 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1697439838188-aaa48162214f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M
+2025-01-01 19:15:26,505 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:26,685 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:15:26,686 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [dU.ILa0126p484] rid: 677523ce-01063c7d-30adee1b'}
+2025-01-01 19:15:30,704 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:30,708 - INFO - 内容已备份到: backups/article_20250101_191530.json
+2025-01-01 19:15:30,708 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:30,713 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:31,273 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:31,273 - INFO - 封面图片上传成功
+2025-01-01 19:15:31,275 - INFO - 准备发布文章：notion 同步到 jekyll 页面的关键问题
+2025-01-01 19:15:31,275 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1697439838188-aaa48162214f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M
+2025-01-01 19:15:31,278 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:31,463 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:15:31,464 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [Iqzz5a01313643] rid: 677523d3-39200d4c-6adabf1f'}
+2025-01-01 19:15:31,464 - ERROR - 处理页面 notion 同步到 jekyll 页面的关键问题 时发生错误: RetryError[<Future at 0x11064ad00 state=finished raised ValueError>]
+2025-01-01 19:15:31,464 - INFO - 正在处理页面: Jekyll网站互动设计疑问点
+2025-01-01 19:15:31,464 - DEBUG - connect_tcp.started host='127.0.0.1' port=7897 local_address=None timeout=60.0 socket_options=None
+2025-01-01 19:15:31,465 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1106503d0>
+2025-01-01 19:15:31,465 - DEBUG - send_request_headers.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:31,465 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:31,465 - DEBUG - send_request_body.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:31,465 - DEBUG - send_request_body.complete
+2025-01-01 19:15:31,465 - DEBUG - receive_response_headers.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:31,465 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'Connection established', [])
+2025-01-01 19:15:31,465 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x11058d350> server_hostname='api.notion.com' timeout=60.0
+2025-01-01 19:15:32,131 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x110650760>
+2025-01-01 19:15:32,131 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:32,132 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:32,132 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:32,132 - DEBUG - send_request_body.complete
+2025-01-01 19:15:32,132 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:33,470 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:33 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb2178fabf00910-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'ETag', b'W/"3fd-rUVZD3sEqZLa5m2R732qMeS/s7Y"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'78e25415-89fb-489f-bd50-9e4b7f77c695'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:33,471 - INFO - HTTP Request: GET https://api.notion.com/v1/pages/16c96ee0-ac35-80ce-bfb6-f4845062d338 "HTTP/1.1 200 OK"
+2025-01-01 19:15:33,471 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:33,471 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:33,471 - DEBUG - response_closed.started
+2025-01-01 19:15:33,471 - DEBUG - response_closed.complete
+2025-01-01 19:15:33,472 - INFO - 获取到文章标题: Jekyll网站互动设计疑问点
+2025-01-01 19:15:33,472 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:33,472 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:33,472 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:33,472 - DEBUG - send_request_body.complete
+2025-01-01 19:15:33,472 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:34,151 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:34 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb217980c7a0910-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"dd37-V8Mth+/s/VBISHY6qqGn08GReUE"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'007efd03-73be-4e01-9b96-7d9085183ff0'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:34,152 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16c96ee0-ac35-80ce-bfb6-f4845062d338/children "HTTP/1.1 200 OK"
+2025-01-01 19:15:34,152 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:34,152 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:34,152 - DEBUG - response_closed.started
+2025-01-01 19:15:34,152 - DEBUG - response_closed.complete
+2025-01-01 19:15:34,153 - INFO - 获取到 46 个内容块
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: heading_2
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: heading_2
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,153 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_2
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_2
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_2
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:34,154 - INFO - 生成的文章内容长度: 3147 字符
+2025-01-01 19:15:34,154 - DEBUG - 生成的文章内容: 
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <h2 style="font-size: 20px; margin: 24px 0 16px;">页面访问次数统计</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">Q: 用jekyll部署到GitHub的网站，能加页面的访问次数么？</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">A: 是的，可以通过以下方法实现页面访问次数统计：</h2>
+<ul>
+<li>第三方统计服务：使用Google Analytics等工具，它们可以提供页面访问次数的统计和分析。</li>
+<li>Jekyll插件：使用jekyll-seo-tag等插件，帮助添加必要的元数据以优化SEO，间接影响访问量。</li>
+<li>手动添加计数器：通过后端服务，如Netlify Functions或AWS Lambda，来处理和存储访问次数。</li>
+<li>静态站点友好的分析工具：使用Plausible或Matomo等工具，它们专为静态站点设计，无需服务器端代码。</li>
+<li>浏览器缓存和本地存储：利用localStorage等浏览器存储机制来模拟访问次数统计，但这种方法不适用于跨设备同步。</li>
+<li>云函数：使用云服务提供商的云函数来记录和存储访问次数。</li>
+<li>GitHub Actions：创建GitHub Actions工作流，自动更新存储访问次数的文件。</li>
+</ul>
+<h2 style="font-size: 20px; margin: 24px 0 16px;">集成点赞功能</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">Q: 那我可以集成一个点赞功能到网站的文章详情么，不需要记录人的信息，每个人点一下，就一个赞？</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">A: 可以集成点赞功能，具体步骤如下：</h2>
+<ol>
+<li>添加点赞按钮：在文章详情页添加一个点赞按钮，用户可以通过点击来表达喜好。</li>
+<li>JavaScript处理：使用JavaScript监听点赞按钮的点击事件，并发送AJAX请求到服务器。</li>
+<li>后端服务更新：由于GitHub Pages不支持服务器端代码，可以使用第三方服务或客户端技巧（如localStorage）来模拟点赞功能，但这种方法不会持久化点赞数据。</li>
+</ol>
+<h2 style="font-size: 20px; margin: 24px 0 16px;">集成评论功能</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">Q: 那么评论呢，可以加么？</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">A: 可以添加评论功能，以下是几种集成方法：</h2>
+<ol>
+<li>Disqus：一个广泛使用的第三方评论服务，提供简单集成方式。</li>
+<li>Facebook Comments：基于Facebook账号的评论系统，方便用户使用社交媒体账号评论。</li>
+<li>Commento：轻量级、开源的评论系统，适合注重隐私的用户，可以自托管。</li>
+<li>Gitalalk：基于GitHub Issues的评论插件，使用GitHub账号进行身份验证，Gitalk GitHub。</li>
+<li>Utterances：使用GitHub Issues存储评论的轻量级评论系统，支持Markdown和代码块，Utterances GitHub。</li>
+<li>Staticman：通过API接收评论并将它们作为Pull Requests发送到GitHub仓库，适合静态站点，Staticman GitHub。</li>
+</ol>
+<h2 style="font-size: 20px; margin: 24px 0 16px;">评论审核要求</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">Q: 但是评论的话，在国内是不是涉及到审核，不能直接在没有申请的情况下使用？</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">A: 是的，根据中国法律法规，提供和使用跟帖评论服务需要遵守相关规定：</h2>
+<ul>
+<li>实名认证：用户需要通过移动电话号码、身份证件号码等方式进行实名认证。</li>
+<li>信息保护：建立健全用户个人信息保护制度。</li>
+<li>先审后发制度：对新闻信息提供跟帖评论服务的，应当建立先审后发制度。</li>
+<li>审核管理：建立健全跟帖评论审核管理、实时巡查、应急处置、举报受理等信息安全管理制度。</li>
+<li>审核编辑队伍：配备与服务规模相适应的审核编辑队伍，加强跟帖评论审核培训。</li>
+</ul>
+<h2 style="font-size: 20px; margin: 24px 0 16px;">Jekyll网站SEO优化</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">Q: 我的jekyll网站如何优化seo？</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">A: 优化Jekyll网站的SEO可以采取以下措施：</h2>
+<ol>
+<li>使用Jekyll SEO插件：如jekyll-seo-tag，它可以帮助添加必要的元标记以提高搜索引擎排名。</li>
+<li>优化页面标题和描述：确保每个页面都有独特的标题和描述元标签。</li>
+<li>生成XML站点地图：使用jekyll-sitemapgem插件来生成站点地图，有助于搜索引擎更好地索引网站。</li>
+<li>添加robots.txt文件：在网站根目录下创建robots.txt文件，指向sitemap，以便搜索引擎爬虫可以更容易地发现和索引网站内容。</li>
+<li>使用语义化的HTML标签：使用h1, h2, h3等标题标签来组织内容，有助于搜索引擎理解页面结构。</li>
+<li>优化内容和关键词：确保内容是原创的，并且深入探讨主题，同时合理使用关键词。</li>
+<li>提高网站性能：压缩资源文件，使用高效的图像格式，利用浏览器缓存机制。</li>
+<li>提升用户体验：采用响应式设计，简洁的界面设计，减少不必要的元素。</li>
+<li>实施技术SEO实践：使用HTTPS协议，确保网站支持移动优先索引。</li>
+</ol>
+    </div>
+    
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+        发布时间：2025-01-01 19:15:34
+    </p>
+    
+2025-01-01 19:15:34,154 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:34,155 - INFO - 内容已备份到: backups/article_20250101_191534.json
+2025-01-01 19:15:34,155 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:34,160 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:34,750 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:34,751 - INFO - 封面图片上传成功
+2025-01-01 19:15:34,751 - INFO - 准备发布文章：Jekyll网站互动设计疑问点
+2025-01-01 19:15:34,751 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <h2 style="font-size: 20px; margin: 24px 0 16px;">页面访问次数统计</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">Q: 用jekyll部
+2025-01-01 19:15:34,753 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:36,326 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 89
+2025-01-01 19:15:36,326 - INFO - 文章成功发布到微信公众号草稿箱
+2025-01-01 19:15:36,327 - INFO - 页面 Jekyll网站互动设计疑问点 已成功发布到微信公众号
+2025-01-01 19:15:36,327 - INFO - 正在处理页面: 如何使用 Notion 来同步管理你的博客和微信公众号
+2025-01-01 19:15:36,327 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:36,327 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:36,327 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:36,327 - DEBUG - send_request_body.complete
+2025-01-01 19:15:36,327 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:36,700 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:36 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb217a9ef1b0910-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"422-8lq44c5/0PnEypwRDswa/ohpxu4"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'300c9927-b51b-4cdf-9932-274ebe70b2a1'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:36,701 - INFO - HTTP Request: GET https://api.notion.com/v1/pages/16b96ee0-ac35-800d-b4d0-c6468c7a7ece "HTTP/1.1 200 OK"
+2025-01-01 19:15:36,701 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:36,701 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:36,701 - DEBUG - response_closed.started
+2025-01-01 19:15:36,701 - DEBUG - response_closed.complete
+2025-01-01 19:15:36,701 - INFO - 获取到文章标题: 如何使用 Notion 来同步管理你的博客和微信公众号
+2025-01-01 19:15:36,701 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:36,702 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:36,702 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:36,702 - DEBUG - send_request_body.complete
+2025-01-01 19:15:36,702 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:37,643 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:37 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb217ac392d0910-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"aaa9-b8XMW64CKJqQ88wyBCPPjQLrlMA"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'6a8677b0-b50a-4997-9184-c9cce9c4dad3'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:37,644 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16b96ee0-ac35-800d-b4d0-c6468c7a7ece/children "HTTP/1.1 200 OK"
+2025-01-01 19:15:37,644 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:37,644 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:37,644 - DEBUG - response_closed.started
+2025-01-01 19:15:37,644 - DEBUG - response_closed.complete
+2025-01-01 19:15:37,645 - INFO - 获取到 44 个内容块
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: image
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: divider
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: divider
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,646 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,647 - DEBUG - 处理块类型: code
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: code
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: divider
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: code
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: divider
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,648 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,649 - DEBUG - 处理块类型: numbered_list_item
+2025-01-01 19:15:37,649 - DEBUG - 处理块类型: heading_3
+2025-01-01 19:15:37,649 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:37,649 - DEBUG - 处理块类型: bulleted_list_item
+2025-01-01 19:15:37,649 - DEBUG - 处理块类型: divider
+2025-01-01 19:15:37,649 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:37,649 - INFO - 生成的文章内容长度: 6868 字符
+2025-01-01 19:15:37,649 - DEBUG - 生成的文章内容: 
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb" style="max-width: 100%; height: auto; display: block; margin: 20px auto;" />
+<h2 style="font-size: 18px; margin: 24px 0 16px;">Notion + Jekyll + 公众号的详细实现</h2>
+<p>使用 Notion 写作，可以享受它优秀的排版和协作功能；然后通过 API 将文章同步到 Jekyll 和微信公众号，实现一站式写作和多平台发布。以下是详细步骤：</p>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">1. 准备工作</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">1.1 配置 Notion API</h2>
+<ol>
+<li>登录你的 Notion 账号，访问 Notion Developers。</li>
+<li>创建一个新的 Integration：</li>
+<li>在 Notion 的数据库页面，点击右上角「共享 (Share)」，将你的 Integration 添加到该页面。</li>
+</ol>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">1.2 准备 Jekyll 环境</h2>
+<ol>
+<li>确保你的 Jekyll 环境正常运行（包括本地或托管在 GitHub Pages）。</li>
+<li>文章存储路径一般在 _posts 文件夹中，格式为 Markdown (.md) 文件。</li>
+</ol>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">1.3 微信公众号开发接口</h2>
+<ol>
+<li>登录你的微信公众号后台，获取 AppID 和 AppSecret。</li>
+<li>配置微信公众号接口，确保可以调用 API（如发布文章接口）。</li>
+</ol>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">2. 实现流程</h2>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">2.1 从 Notion 获取文章</h2>
+<p>通过 Notion API，提取你在 Notion 数据库中的文章内容，转化为 Markdown 文件。</p>
+<p>示例代码（Python）：</p>
+
+            <div style="position: relative; margin: 20px 0;">
+                <pre style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.5; tab-size: 4;">
+                    <code class="language-python" style="color: #24292e;">
+                        import requests
+import json
+
+NOTION_API_TOKEN = "your_notion_integration_token"
+DATABASE_ID = "your_notion_database_id"
+
+headers = {
+    "Authorization": f"Bearer {NOTION_API_TOKEN}",
+    "Content-Type": "application/json",
+    "Notion-Version": "2022-06-28",
+}
+
+# è·å Notion æ°æ®åºä¸­çé¡µé¢
+def fetch_notion_pages():
+    url = f"https://api.notion.com/v1/databases/{DATABASE_ID}/query"
+    response = requests.post(url, headers=headers)
+    pages = response.json().get("results", [])
+    return pages
+
+# è·ååä¸ªé¡µé¢çè¯¦ç»åå®¹
+def fetch_page_content(page_id):
+    url = f"https://api.notion.com/v1/blocks/{page_id}/children"
+    response = requests.get(url, headers=headers)
+    content = response.json()
+    return content
+
+# ç¤ºä¾è°ç¨
+pages = fetch_notion_pages()
+for page in pages:
+    print(page["properties"]["Name"]["title"][0]["text"]["content"])
+
+                    </code>
+                </pre>
+                <div style="position: absolute; top: 8px; right: 12px; font-size: 12px; color: #6a737d;">
+                    python
+                </div>
+            </div>
+            
+<h2 style="font-size: 18px; margin: 24px 0 16px;">2.2 同步到 Jekyll</h2>
+<p>将提取到的文章内容转化为 Markdown 文件，并存储到 Jekyll 的 _posts 文件夹中。</p>
+<p>示例代码（继续 Python）：</p>
+
+            <div style="position: relative; margin: 20px 0;">
+                <pre style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.5; tab-size: 4;">
+                    <code class="language-python" style="color: #24292e;">
+                        import os
+from datetime import datetime
+
+# å°æç« åå®¹è½¬ä¸º Markdown æä»¶
+def save_to_jekyll(title, content):
+    date = datetime.now().strftime("%Y-%m-%d")
+    filename = f"./_posts/{date}-{title.replace(' ', '-').lower()}.md"
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(f"---
+")
+        file.write(f"title: {title}
+")
+        file.write(f"date: {date}
+")
+        file.write(f"layout: post
+")
+        file.write(f"---
+
+")
+        file.write(content)
+    print(f"Saved to Jekyll: {filename}")
+
+# ç¤ºä¾è°ç¨
+for page in pages:
+    title = page["properties"]["Name"]["title"][0]["text"]["content"]
+    content = "æç« åå®¹ï¼æ ¹æ® fetch_page_content æåå·ä½æ®µè½ï¼"
+    save_to_jekyll(title, content)
+
+                    </code>
+                </pre>
+                <div style="position: absolute; top: 8px; right: 12px; font-size: 12px; color: #6a737d;">
+                    python
+                </div>
+            </div>
+            
+<p>运行后，你的文章会自动存储到 Jekyll 的 _posts 文件夹中。使用 jekyll serve 预览效果，或者推送到 GitHub Pages。</p>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">2.3 同步到微信公众号</h2>
+<p>将文章内容通过微信公众号 API 发布到公众号平台。</p>
+<p>示例代码（微信公众号）：</p>
+
+            <div style="position: relative; margin: 20px 0;">
+                <pre style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.5; tab-size: 4;">
+                    <code class="language-python" style="color: #24292e;">
+                        # è·åå¬ä¼å· Access Token
+def get_access_token(app_id, app_secret):
+    url = f"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={app_id}&secret={app_secret}"
+    response = requests.get(url).json()
+    return response.get("access_token")
+
+# åå¸æç« 
+def publish_to_wechat(access_token, title, content):
+    url = f"https://api.weixin.qq.com/cgi-bin/draft/add?access_token={access_token}"
+    data = {
+        "articles": [
+            {
+                "title": title,
+                "content": content,
+                "author": "ä½è",
+                "digest": "æè¦åå®¹",
+                "show_cover_pic": 1,
+            }
+        ]
+    }
+    response = requests.post(url, json=data).json()
+    print(response)
+
+# ç¤ºä¾è°ç¨
+APP_ID = "your_wechat_app_id"
+APP_SECRET = "your_wechat_app_secret"
+access_token = get_access_token(APP_ID, APP_SECRET)
+
+# åå¸åå®¹
+for page in pages:
+    title = page["properties"]["Name"]["title"][0]["text"]["content"]
+    content = "æç« åå®¹ï¼æ ¹æ® fetch_page_content æåå·ä½æ®µè½ï¼"
+    publish_to_wechat(access_token, title, content)
+
+                    </code>
+                </pre>
+                <div style="position: absolute; top: 8px; right: 12px; font-size: 12px; color: #6a737d;">
+                    python
+                </div>
+            </div>
+            
+<h2 style="font-size: 18px; margin: 24px 0 16px;">3. 自动化整合</h2>
+<p>你可以将以上流程整合为一个自动化脚本，实现全流程自动运行：</p>
+<ol>
+<li>获取 Notion 数据库内容 → 提取标题和正文。</li>
+<li>保存为 Markdown 文件 → 同步到 Jekyll 博客。</li>
+<li>发布到微信公众号 → 调用公众号 API。</li>
+</ol>
+<h2 style="font-size: 18px; margin: 24px 0 16px;">定时自动化</h2>
+<ul>
+<li>使用 crontab 或 Windows Task Scheduler 定时运行脚本，实现每天定时同步。</li>
+<li>结合 Git Hooks 或 CI/CD 工具（如 GitHub Actions），在提交文章后自动同步到 Jekyll 和公众号。</li>
+</ul>
+    </div>
+    
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+        发布时间：2025-01-01 19:15:37
+    </p>
+    
+2025-01-01 19:15:37,651 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:37,651 - INFO - 原始标题: 如何使用 Notion 来同步管理你的博客和微信公众号
+2025-01-01 19:15:37,651 - INFO - 标题字节长度超过64，已截断为: 如何使用 Notion 来同步管理你的博客和微信公
+2025-01-01 19:15:37,652 - INFO - 内容已备份到: backups/article_20250101_191537.json
+2025-01-01 19:15:37,652 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:37,662 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:38,244 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:38,245 - INFO - 封面图片上传成功
+2025-01-01 19:15:38,246 - INFO - 准备发布文章：如何使用 Notion 来同步管理你的博客和微信公
+2025-01-01 19:15:38,246 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb" style
+2025-01-01 19:15:38,249 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:38,460 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:15:38,461 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [kILv5a01385087] rid: 677523da-4151e612-2c41b4b1'}
+2025-01-01 19:15:42,461 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:42,461 - INFO - 原始标题: 如何使用 Notion 来同步管理你的博客和微信公众号
+2025-01-01 19:15:42,461 - INFO - 标题字节长度超过64，已截断为: 如何使用 Notion 来同步管理你的博客和微信公
+2025-01-01 19:15:42,462 - INFO - 内容已备份到: backups/article_20250101_191542.json
+2025-01-01 19:15:42,462 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:42,467 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:43,031 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:43,031 - INFO - 封面图片上传成功
+2025-01-01 19:15:43,032 - INFO - 准备发布文章：如何使用 Notion 来同步管理你的博客和微信公
+2025-01-01 19:15:43,032 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb" style
+2025-01-01 19:15:43,034 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:43,232 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:15:43,233 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [pfT_nA01434667] rid: 677523df-77276437-5ab04d57'}
+2025-01-01 19:15:47,238 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:47,238 - INFO - 原始标题: 如何使用 Notion 来同步管理你的博客和微信公众号
+2025-01-01 19:15:47,238 - INFO - 标题字节长度超过64，已截断为: 如何使用 Notion 来同步管理你的博客和微信公
+2025-01-01 19:15:47,243 - INFO - 内容已备份到: backups/article_20250101_191547.json
+2025-01-01 19:15:47,243 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:47,254 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:47,793 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:47,795 - INFO - 封面图片上传成功
+2025-01-01 19:15:47,796 - INFO - 准备发布文章：如何使用 Notion 来同步管理你的博客和微信公
+2025-01-01 19:15:47,796 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb" style
+2025-01-01 19:15:47,801 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:48,047 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:15:48,048 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [6ukZcA01484357] rid: 677523e4-40bfad94-4e057b90'}
+2025-01-01 19:15:48,048 - ERROR - 处理页面 如何使用 Notion 来同步管理你的博客和微信公众号 时发生错误: RetryError[<Future at 0x11066d040 state=finished raised ValueError>]
+2025-01-01 19:15:48,048 - INFO - 正在处理页面: 如何将 notion 内容同步到 GitHub 的 jekyll 博客中
+2025-01-01 19:15:48,049 - DEBUG - connect_tcp.started host='127.0.0.1' port=7897 local_address=None timeout=60.0 socket_options=None
+2025-01-01 19:15:48,050 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11067e280>
+2025-01-01 19:15:48,050 - DEBUG - send_request_headers.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:48,050 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:48,050 - DEBUG - send_request_body.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:48,050 - DEBUG - send_request_body.complete
+2025-01-01 19:15:48,050 - DEBUG - receive_response_headers.started request=<Request [b'CONNECT']>
+2025-01-01 19:15:48,050 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'Connection established', [])
+2025-01-01 19:15:48,050 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x11058d350> server_hostname='api.notion.com' timeout=60.0
+2025-01-01 19:15:49,721 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11067e1f0>
+2025-01-01 19:15:49,721 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:49,721 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:49,721 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:49,721 - DEBUG - send_request_body.complete
+2025-01-01 19:15:49,721 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:50,392 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:50 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb217fd9eca2aa7-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'ETag', b'W/"3c9-WUPPd2h8tigXjLHvPYgYFcGl8Zk"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'1bd0c935-e632-4192-bce7-80a10ad63481'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:50,392 - INFO - HTTP Request: GET https://api.notion.com/v1/pages/16e96ee0-ac35-8084-9247-f78135fc1ace "HTTP/1.1 200 OK"
+2025-01-01 19:15:50,392 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:50,393 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:50,393 - DEBUG - response_closed.started
+2025-01-01 19:15:50,393 - DEBUG - response_closed.complete
+2025-01-01 19:15:50,393 - INFO - 获取到文章标题: 如何将 notion 内容同步到 GitHub 的 jekyll 博客中
+2025-01-01 19:15:50,393 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:50,393 - DEBUG - send_request_headers.complete
+2025-01-01 19:15:50,393 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-01 19:15:50,393 - DEBUG - send_request_body.complete
+2025-01-01 19:15:50,393 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-01 19:15:50,772 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 01 Jan 2025 11:15:50 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'8fb21801db8d2aa7-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"54f-U61wvOugwcrafK9rteRdmNZO5Lo"'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Vary', b'Accept-Encoding'), (b'content-security-policy', b"default-src 'none'"), (b'referrer-policy', b'strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'x-dns-prefetch-control', b'off'), (b'x-download-options', b'noopen'), (b'x-frame-options', b'SAMEORIGIN'), (b'x-notion-request-id', b'9d8a762b-df31-4bfc-8a22-79279f23a3f8'), (b'x-permitted-cross-domain-policies', b'none'), (b'x-xss-protection', b'0'), (b'Server', b'cloudflare'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-01 19:15:50,773 - INFO - HTTP Request: GET https://api.notion.com/v1/blocks/16e96ee0-ac35-8084-9247-f78135fc1ace/children "HTTP/1.1 200 OK"
+2025-01-01 19:15:50,773 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-01 19:15:50,773 - DEBUG - receive_response_body.complete
+2025-01-01 19:15:50,773 - DEBUG - response_closed.started
+2025-01-01 19:15:50,773 - DEBUG - response_closed.complete
+2025-01-01 19:15:50,773 - INFO - 获取到 2 个内容块
+2025-01-01 19:15:50,773 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:50,773 - DEBUG - 处理块类型: paragraph
+2025-01-01 19:15:50,773 - INFO - 生成的文章内容长度: 239 字符
+2025-01-01 19:15:50,773 - DEBUG - 生成的文章内容: 
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <p>一，申</p>
+    </div>
+    
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+        发布时间：2025-01-01 19:15:50
+    </p>
+    
+2025-01-01 19:15:50,773 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:50,774 - INFO - 内容已备份到: backups/article_20250101_191550.json
+2025-01-01 19:15:50,774 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:50,780 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:51,622 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:51,623 - INFO - 封面图片上传成功
+2025-01-01 19:15:51,624 - INFO - 准备发布文章：如何将 notion 内容同步到 GitHub 的 jekyll 博客中
+2025-01-01 19:15:51,625 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <p>一，申</p>
+    </div>
+    
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+       
+2025-01-01 19:15:51,628 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:51,817 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 102
+2025-01-01 19:15:51,821 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [x0151d417] rid: 677523e7-2e74262e-3e67212e'}
+2025-01-01 19:15:55,827 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:15:55,828 - INFO - 内容已备份到: backups/article_20250101_191555.json
+2025-01-01 19:15:55,828 - INFO - 正在上传默认封面图片...
+2025-01-01 19:15:55,833 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:56,415 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:15:56,416 - INFO - 封面图片上传成功
+2025-01-01 19:15:56,417 - INFO - 准备发布文章：如何将 notion 内容同步到 GitHub 的 jekyll 博客中
+2025-01-01 19:15:56,417 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <p>一，申</p>
+    </div>
+    
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+       
+2025-01-01 19:15:56,419 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:15:56,636 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:15:56,637 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [DRNHnA01564667] rid: 677523ec-50699b74-11e87e83'}
+2025-01-01 19:16:00,643 - INFO - 正在发布文章到微信公众号...
+2025-01-01 19:16:00,645 - INFO - 内容已备份到: backups/article_20250101_191600.json
+2025-01-01 19:16:00,645 - INFO - 正在上传默认封面图片...
+2025-01-01 19:16:00,656 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:16:01,261 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/material/add_material?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW&type=thumb HTTP/1.1" 200 242
+2025-01-01 19:16:01,263 - INFO - 封面图片上传成功
+2025-01-01 19:16:01,264 - INFO - 准备发布文章：如何将 notion 内容同步到 GitHub 的 jekyll 博客中
+2025-01-01 19:16:01,264 - INFO - 文章内容（前200字符）：
+    <div style="font-size: 14px; line-height: 1.8; color: #333;">
+        <p>一，申</p>
+    </div>
+    
+    <hr />
+    <p style="color: #999; font-size: 12px;">
+        本文由 Notion 自动同步至微信公众号<br>
+       
+2025-01-01 19:16:01,271 - DEBUG - Starting new HTTPS connection (1): api.weixin.qq.com:443
+2025-01-01 19:16:01,517 - DEBUG - https://api.weixin.qq.com:443 "POST /cgi-bin/draft/add?access_token=87_WrrQRXvZqnj4SJkgidgHCkNOfgl9G_0cB6b99UX8lFHK243pEeHKABQfc1YujMFSCwBnYhjv2iv9rEah9z04j99KvnIwnfbgArG_2_Vazy9LGHtO13tzevcr0fkAADiAFATTW HTTP/1.1" 200 107
+2025-01-01 19:16:01,519 - ERROR - 发布文章失败: {'errcode': 45003, 'errmsg': 'title size out of limit hint: [fjEGpA01614485] rid: 677523f1-2c2a6fd1-1f66ffb5'}
+2025-01-01 19:16:01,520 - ERROR - 处理页面 如何将 notion 内容同步到 GitHub 的 jekyll 博客中 时发生错误: RetryError[<Future at 0x11067d880 state=finished raised ValueError>]
+2025-01-01 19:16:01,520 - INFO - Notion 到微信公众号的同步完成
