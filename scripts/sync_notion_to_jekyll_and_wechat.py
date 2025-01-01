@@ -100,27 +100,46 @@ def process_block_content(block):
     if block_type == 'paragraph':
         text = block[block_type]['rich_text']
         if text:
-            return text[0]['plain_text']
+            return ''.join([t['plain_text'] for t in text])
     elif block_type == 'heading_1':
         text = block[block_type]['rich_text']
         if text:
-            return f"# {text[0]['plain_text']}"
+            return f"# {''.join([t['plain_text'] for t in text])}"
     elif block_type == 'heading_2':
         text = block[block_type]['rich_text']
         if text:
-            return f"## {text[0]['plain_text']}"
+            return f"## {''.join([t['plain_text'] for t in text])}"
     elif block_type == 'heading_3':
         text = block[block_type]['rich_text']
         if text:
-            return f"### {text[0]['plain_text']}"
+            return f"### {''.join([t['plain_text'] for t in text])}"
     elif block_type == 'bulleted_list_item':
         text = block[block_type]['rich_text']
         if text:
-            return f"- {text[0]['plain_text']}"
+            return f"- {''.join([t['plain_text'] for t in text])}"
     elif block_type == 'numbered_list_item':
         text = block[block_type]['rich_text']
         if text:
-            return f"1. {text[0]['plain_text']}"
+            return f"1. {''.join([t['plain_text'] for t in text])}"
+    elif block_type == 'code':
+        text = block[block_type]['rich_text']
+        if text:
+            code_content = ''.join([t['plain_text'] for t in text])
+            language = block[block_type]['language']
+            return f"```{language}\n{code_content}\n```"
+    elif block_type == 'image':
+        image_url = block[block_type]['file']['url']
+        return f"![image]({image_url})"
+    elif block_type == 'quote':
+        text = block[block_type]['rich_text']
+        if text:
+            return f"> {''.join([t['plain_text'] for t in text])}"
+    elif block_type == 'callout':
+        text = block[block_type]['rich_text']
+        if text:
+            return f"**{''.join([t['plain_text'] for t in text])}**"
+    elif block_type == 'divider':
+        return "---"
     elif block_type == 'child_page':
         return None  # 子页面需要单独处理
     
