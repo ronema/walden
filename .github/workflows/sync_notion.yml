@@ -23,7 +23,7 @@ jobs:
     - name: Run sync script
       run: |
         NOTION_API_TOKEN=${{ secrets.NOTION_API_TOKEN }} \
-        python scripts/sync_notion_to_jekyll_and_wechat.py
+        python scripts/sync_notion_to_jekyll.py
     
     - name: Commit and push changes
       run: |

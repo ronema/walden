@@ -1,6 +1,8 @@
 import os
 import requests
 from notion_client import Client
+from dotenv import load_dotenv
+load_dotenv()
 import json
 from datetime import datetime
 
@@ -24,9 +26,7 @@ def translate_title(title):
         '如何': 'how',
         '使用': 'use',
         '管理': 'manage',
-        '博客': 'blog',
-        '微信': 'wechat',
-        '公众号': 'official account'
+        '博客': 'blog'
     }
     
     # 将标题按空格分割并翻译
@@ -236,7 +236,7 @@ def save_to_markdown(title, content):
         return False
 
 def main():
-    """主函数"""
+    """将Notion内容同步到Jekyll博客的主函数"""
     if not test_connection():
         return
 
