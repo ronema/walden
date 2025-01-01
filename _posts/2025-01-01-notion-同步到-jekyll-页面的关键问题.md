@@ -2,6 +2,14 @@
 title: notion 同步到 jekyll 页面的关键问题
 date: 2025-01-01
 layout: post
+banner:
+  image: https://source.unsplash.com/1200x800/?notion,同步到,jekyll,页面的关键问题
+  opacity: 0.618
+  background: "#000"
+  height: "100vh"
+  min_height: "38vh"
+  heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
+  subheading_style: "color: gold"
 ---
 
 问题主要出在两个地方：
