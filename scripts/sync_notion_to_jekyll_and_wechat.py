@@ -1,7 +1,76 @@
 import os
+import requests
 from notion_client import Client
 import json
 from datetime import datetime
+
+from urllib3.util.retry import Retry
+from requests.adapters import HTTPAdapter
+
+def translate_title(title):
+    """将中文标题翻译为英文"""
+    # 常见技术术语翻译字典
+    translation_dict = {
+        'notion': 'notion',
+        '同步': 'sync',
+        'jekyll': 'jekyll',
+        '页面': 'page',
+        '关键': 'key',
+        '问题': 'issue',
+        '网站': 'website',
+        '互动': 'interaction',
+        '设计': 'design',
+        '疑问': 'question',
+        '如何': 'how',
+        '使用': 'use',
+        '管理': 'manage',
+        '博客': 'blog',
+        '微信': 'wechat',
+        '公众号': 'official account'
+    }
+    
+    # 将标题按空格分割并翻译
+    words = title.split()
+    translated_words = [translation_dict.get(word, word) for word in words]
+    return ' '.join(translated_words)
+
+def get_unsplash_image(title, width=1200, height=800):
+    """通过Unsplash API获取与标题相关的图片"""
+    UNSPLASH_ACCESS_KEY = "nyqPuIzXl-mYVJruwXUGb4B4RFrMSe-1zqUKdp6vZZA"
+    url = "https://api.unsplash.com/photos/random"
+    headers = {
+        "Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}"
+    }
+    
+    # 翻译标题为英文
+    english_title = translate_title(title)
+    params = {
+        "query": title,
+        "orientation": "landscape",
+        "w": width,
+        "h": height,
+        "content_filter": "high",
+        "order_by": "relevant"
+    }
+    
+    # 配置重试机制
+    retry_strategy = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=[500, 502, 503, 504]
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session = requests.Session()
+    session.mount("https://", adapter)
+    
+    try:
+        response = session.get(url, headers=headers, params=params, timeout=10, verify=False)
+        response.raise_for_status()
+        data = response.json()
+        return data["urls"]["regular"]
+    except requests.exceptions.RequestException as e:
+        print(f"获取Unsplash图片失败: {str(e)}")
+        return None
 
 # Notion API 配置
 NOTION_API_TOKEN = os.getenv("NOTION_API_TOKEN")
@@ -101,6 +170,7 @@ def get_page_content(page_id):
 def save_to_markdown(title, content):
     """保存为 Markdown 文件"""
     try:
+        # 确保日期在文件名最前面，并按时间倒序排列
         date = datetime.now().strftime("%Y-%m-%d")
         filename = f"_posts/{date}-{title.replace(' ', '-').lower()}.md"
         
@@ -113,7 +183,11 @@ def save_to_markdown(title, content):
             f.write(f"date: {date}\n")
             f.write("layout: post\n")
             f.write("banner:\n")
-            f.write("  image: https://source.unsplash.com/1200x800/?" + title.replace(" ", ",") + "\n")
+            image_url = get_unsplash_image(title)
+            if image_url:
+                f.write(f"  image: {image_url}\n")
+            else:
+                f.write("  image: https://source.unsplash.com/featured/1200x800/?technology,blog\n")
             f.write("  opacity: 0.618\n")
             f.write("  background: \"#000\"\n")
             f.write("  height: \"100vh\"\n")
