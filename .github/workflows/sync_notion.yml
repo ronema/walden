@@ -2,7 +2,7 @@ name: Sync Notion to Jekyll
 
 on:
   schedule:
-    - cron: '0 22,4,13 * * *' # 每天UTC时间22:00,4:00,13:00运行（北京时间6:00,12:00,21:00）
+    - cron: '0 */2 * * *' # 每 2 小时执行一次
   workflow_dispatch: # 允许手动触发
 
 jobs:
