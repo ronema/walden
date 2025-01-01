@@ -138,28 +138,8 @@ def process_block_content(block):
                 print("未知的图片类型")
                 return ""
             
-            # 下载图片到本地
-            os.makedirs('assets/images', exist_ok=True)
-            image_name = os.path.basename(image_url.split('?')[0])  # 去除URL参数
-            local_path = f"assets/images/{image_name}"
-            
-            # 设置请求头，模拟浏览器访问
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'
-            }
-            
-            # 对于external类型的图片，可能需要处理重定向
-            session = requests.Session()
-            session.max_redirects = 5
-            response = session.get(image_url, headers=headers, stream=True, allow_redirects=True)
-            response.raise_for_status()
-            
-            with open(local_path, 'wb') as f:
-                for chunk in response.iter_content(chunk_size=8192):
-                    if chunk:
-                        f.write(chunk)
-            
-            return f"![image](/{local_path})"
+            # 直接使用Notion的图片URL
+            return f"![image]({image_url})"
         except Exception as e:
             print(f"图片处理失败: {str(e)}")
             return ""
