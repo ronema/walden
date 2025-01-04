@@ -32,10 +32,54 @@ class: page-about
 
 
 ### 联系方式
-email: shelaiful@foxmail.com
+Email: shelaiful@foxmail.com
 
-![微信二维码](assets/images/profile/wechat.jpg){:width="200px"}
+![微信二维码](assets/images/profile/wechat.jpg){:width="200px" style="border-radius: 10px;"}
 
+### 社交媒体
+
+<style>
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 400px;
+}
+.social-item {
+  display: flex;
+  align-items: center;
+}
+.social-item img {
+  margin-right: 12px;
+}
+</style>
+
+<div class="social-links">
+  <div class="social-item">
+    <a href="https://placeholder.com/wechat" target="_blank">
+      <img src="/assets/images/profile/微信.svg" class="icon" width="24" height="24">
+      <span>微信公众号</span>
+    </a>
+  </div>
+  <div class="social-item">
+    <a href="https://placeholder.com/zhihu" target="_blank">
+      <img src="/assets/images/profile/知乎.svg" class="icon" width="24" height="24">
+      <span>知乎</span>
+    </a>
+  </div>
+  <div class="social-item">
+    <a href="https://placeholder.com/jike" target="_blank">
+      <img src="/assets/images/profile/即刻.svg" class="icon" width="24" height="24">
+      <span>即刻</span>
+    </a>
+  </div>
+  <div class="social-item">
+    <a href="https://placeholder.com/xiaohongshu" target="_blank">
+      <img src="/assets/images/profile/小红书-copy.svg" class="icon" width="24" height="24">
+      <span>小红书</span>
+    </a>
+  </div>
+</div>
 {% endcapture %}
 
 {{ about_content | markdownify }}

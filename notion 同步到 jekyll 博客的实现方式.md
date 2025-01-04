@@ -142,3 +142,65 @@ def save_to_markdown(title, content):
 ## 注意事项
 - 确保 Notion 页面已与集成共享。
 - 根据需要调整 Markdown 文件的元数据和格式。
+
+## 常见问题与解决方案
+
+### 1. GitHub Actions 推送失败（403 错误）
+
+#### 原因分析
+- GitHub Actions 默认没有仓库的写权限
+- 需要配置正确的权限才能推送更改
+
+#### 解决方案
+1. 配置仓库 Actions 权限：
+   - 打开 GitHub 仓库页面
+   - 点击 Settings -> Actions -> General
+   - 找到 "Workflow permissions"
+   - 选择 "Read and write permissions"
+   - 保存更改
+
+2. 配置 Personal Access Token（PAT）：
+   - 登录 GitHub 账户
+   - 点击右上角头像 -> Settings -> Developer settings -> Personal access tokens -> Tokens (classic)
+   - 点击 "Generate new token" -> "Generate new token (classic)"
+   - 选择以下权限：
+     * repo（全选）
+     * workflow
+   - 生成并复制 token
+
+3. 在仓库中配置 PAT：
+   - 打开仓库页面
+   - 点击 Settings -> Secrets and variables -> Actions
+   - 点击 "New repository secret"
+   - 名称输入 `GH_PAT`
+   - 值粘贴刚才复制的 token
+   - 点击 Add secret
+
+4. 修改工作流配置：
+   ```yaml
+   - name: Commit and push changes
+     env:
+       GH_PAT: ${{ secrets.GH_PAT }}
+     run: |
+       git config --global user.name "GitHub Actions"
+       git config --global user.email "actions@github.com"
+       git remote set-url origin https://x-access-token:$GH_PAT@github.com/$GITHUB_REPOSITORY.git
+       git add _posts/
+       git commit -m "Automated sync from Notion" || echo "No changes to commit"
+       git push origin main
+   ```
+
+### 2. 其他常见错误
+
+#### ModuleNotFoundError: No module named 'dotenv'
+- 解决方案：在 requirements.txt 中添加 `python-dotenv` 依赖
+- 修改 GitHub Actions 工作流：
+  ```yaml
+  - name: Install dependencies
+    run: pip install notion-client requests python-dotenv
+  ```
+
+#### Notion API 认证失败
+- 检查 `.env` 文件中的 `NOTION_API_TOKEN` 是否正确
+- 确保 Notion 页面已与集成共享
+- 检查 Notion Integration 是否启用

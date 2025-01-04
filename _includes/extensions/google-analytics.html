@@ -6,7 +6,8 @@
     var enableDNT = "{{ site.enableDNT | default: true }}" == "true";
 
     if (!enableDNT || !doNotTrack) {
-      var measurementId = '{{ site.google_analytics }}';
+      // 使用用户提供的Google Analytics ID
+      var measurementId = 'G-YGLM0DN8VX';
 
       (function(src) {
         var tag = document.createElement('script');
@@ -24,4 +25,3 @@
   }
   window.addEventListener("load", initGoogleAnalytics);
 </script>
-
