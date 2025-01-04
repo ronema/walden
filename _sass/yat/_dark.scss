@@ -205,5 +205,24 @@ html[data-theme="dark"]  {
     display: none;
     background-color: $dark-background-color;
   }
-}
 
+  // 社交媒体图标暗色模式样式
+  .social-media-list {
+    a {
+      color: #f8f8f8;
+      
+      &:hover {
+        color: lighten($brand-color, 20%);
+      }
+    }
+    
+    img, svg {
+      filter: invert(1);
+      transition: filter 0.3s ease;
+      
+      &:hover {
+        filter: invert(0.8);
+      }
+    }
+  }
+}
