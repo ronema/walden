@@ -27,11 +27,10 @@ function getGAPvCount() {
   .then(response => response.json())
   .then(data => {
     const pvCount = data.reports[0].data.totals[0].values[0];
-    document.getElementById('ga-pv-count').textContent = pvCount;
+    console.log('Total pageviews:', pvCount);
   })
   .catch(error => {
     console.error('Error fetching PV count:', error);
-    document.getElementById('ga-pv-count').textContent = '获取失败';
   });
 }
 
