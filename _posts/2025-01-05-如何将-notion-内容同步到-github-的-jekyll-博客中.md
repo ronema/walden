@@ -3,7 +3,7 @@ title: 如何将 notion 内容同步到 GitHub 的 jekyll 博客中
 date: 2025-01-05
 layout: post
 banner:
-  image: https://images.unsplash.com/photo-1598974600518-e8ccb1d9ca9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzYwNTA5MDd8&ixlib=rb-4.0.3&q=80&w=1080
+  image: https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzYwNTExODV8&ixlib=rb-4.0.3&q=80&w=1080
   opacity: 0.618
   background: "#000"
   height: "100vh"
