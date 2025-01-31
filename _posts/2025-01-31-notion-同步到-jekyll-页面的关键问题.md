@@ -3,7 +3,7 @@ title: Notion 同步到 jekyll 页面的关键问题
 date: 2025-01-31
 layout: post
 banner:
-  image: https://images.unsplash.com/photo-1712552514190-87502c259839?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMzI5OTN8&ixlib=rb-4.0.3&q=80&w=1080
+  image: https://images.unsplash.com/photo-1715429565940-c1af3ece89fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzNDA1NTF8&ixlib=rb-4.0.3&q=80&w=1080
   opacity: 0.618
   background: "#000"
   height: "100vh"
