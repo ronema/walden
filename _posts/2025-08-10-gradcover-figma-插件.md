@@ -3,7 +3,7 @@ title: GradCover-figma 插件
 date: 2025-08-10
 layout: post
 banner:
-  image: https://images.unsplash.com/photo-1661434714812-f4c5682434bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MDA5NDF8&ixlib=rb-4.1.0&q=80&w=1080
+  image: https://images.unsplash.com/photo-1590816911133-40f771f0ea7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MDc1Mzl8&ixlib=rb-4.1.0&q=80&w=1080
   opacity: 0.618
   background: "#000"
   height: "100vh"
