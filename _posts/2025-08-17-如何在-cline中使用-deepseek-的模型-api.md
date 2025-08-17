@@ -3,7 +3,7 @@ title: 如何在 Cline中使用 deepseek 的模型 api
 date: 2025-08-17
 layout: post
 banner:
-  image: https://images.unsplash.com/photo-1652543548312-59247b83276c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MjYxMDB8&ixlib=rb-4.1.0&q=80&w=1080
+  image: https://images.unsplash.com/photo-1682456132164-4a401e04b199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTIwMzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MzQ1NDl8&ixlib=rb-4.1.0&q=80&w=1080
   opacity: 0.618
   background: "#000"
   height: "100vh"
